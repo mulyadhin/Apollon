@@ -1,18 +1,34 @@
 body {
+  font-family: "Nunito", sans-serif;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 h1 {
   text-align: center;
-  color: #fda085;
+  color: #ee5025;
 }
 #search-bar {
-  background-color: #a1c4fd;
+  background-color: #b6d2ff;
+  color: #fffff4;
   border-style: none;
-  border-color: #fffff4a5;
-  border-radius: 2px;
+  border-color: #fffff4;
+  border-radius: 5px;
   font-size: 18px;
   padding: 10px;
+  width: 70%;
+}
+::placeholder {
+  color: #fffff4;
+}
+#submit-button {
+  background-color: #3663ab;
+  color: #fffff4;
+  border-style: none;
+  border-color: #fffff4;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  width: 20%;
 }
 .box {
   background-color: #fffff4a5;
@@ -51,4 +67,5 @@ li {
 footer {
   clear: both;
   text-align: center;
+  font-size: 14px;
 }
