@@ -4,9 +4,11 @@ body {
 }
 
 h1 {
-  text-align: center;
   color: #ee5025;
+  font-size: 42px;
+  text-align: center;
 }
+
 #search-bar {
   background-color: #b6d2ff;
   color: #fffff4;
@@ -15,11 +17,13 @@ h1 {
   border-radius: 5px;
   font-size: 18px;
   padding: 10px;
-  width: 70%;
+  width: 75%;
 }
+
 ::placeholder {
-  color: #fffff4;
+  color: #535353;
 }
+
 #submit-button {
   background-color: #3663ab;
   color: #fffff4;
@@ -30,20 +34,38 @@ h1 {
   padding: 10px;
   width: 20%;
 }
+
 .box {
   background-color: #fffff4a5;
   border-radius: 5px;
-  width: 90%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  position: relative;
+  width: 90%;
+}
+
+h2 {
+  margin: 40px 0 20px;
+}
+.current-date {
+  margin: 20px 0 20px;
+}
+.current-forecast {
+  line-height: 6px;
+  font-size: 14px;
 }
 
 .current-temperature {
-  display: flex;
-  position: relative;
-  position: right;
-  font-size: 30px;
+  position: absolute;
+  right: 40px;
+  top: 120px;
+  font-size: 36px;
+}
+.current-temperature .temperature-unit {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
 }
 
 ul {
@@ -64,8 +86,16 @@ li {
   max-width: 110px;
 }
 
+hr {
+  max-width: 640px;
+  margin: 0 auto;
+}
 footer {
   clear: both;
   text-align: center;
   font-size: 14px;
+  padding-top: 40px;
+}
+.foot-note {
+  padding: 5px 0px 10px;
 }
