@@ -56,14 +56,14 @@ h2 {
   font-size: 14px;
 }
 
-.current-temperature {
+.temperature {
   position: absolute;
   right: 40px;
   top: 120px;
   font-size: 36px;
   font-weight: 700;
 }
-.current-temperature .temperature-unit {
+.temperature .temperature-unit {
   font-size: 20px;
   position: absolute;
   top: 5px;
