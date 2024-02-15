@@ -9,9 +9,9 @@ h1 {
   text-align: center;
 }
 
-#search-bar {
+.search-bar {
   background-color: #b6d2ff;
-  color: #fffff4;
+  color: #535353;
   border-style: none;
   border-color: #fffff4;
   border-radius: 5px;
@@ -61,6 +61,7 @@ h2 {
   right: 40px;
   top: 120px;
   font-size: 36px;
+  font-weight: 700;
 }
 .current-temperature .temperature-unit {
   font-size: 20px;

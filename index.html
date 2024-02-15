@@ -12,12 +12,12 @@
   <body>
     <h1>APOLLON</h1>
     <header class="box">
-        <form>
-        <input type="search" placeholder="Search for city..." id="search-bar" />
+        <form class="search-form" id="search-form">
+        <input type="search" placeholder="Search for city..." class="search-bar" id="search-form-input" />
         <input type="submit" placeholder="Search" id="submit-button" />
       </form>
       <div>
-        <h2>Heidelberg</h2>
+        <h2 class="city" id="city">Heidelberg</h2>
         <p class="current-date">Sunday, 11th of February 14:19</p>
       <div class="current-forecast">
        <p class="precipitation" >Precipitation: 0%</p>
@@ -66,5 +66,6 @@
       <a href="#" target="_blank">hosted on Netlify</a>.
     </p>
     </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
