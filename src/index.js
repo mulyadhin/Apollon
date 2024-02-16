@@ -31,6 +31,8 @@ function refreshWeather(response) {
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
 
+  // let weatherIcon = `<img scr="${response.condition.icon_url}" class="weather-icon" >`;
+
   let temperature = response.data.daily[currentDay].temperature.day;
   let temperatureElement = document.querySelector(".current-temperature");
   temperatureElement.innerHTML = Math.round(temperature);
@@ -47,78 +49,83 @@ function refreshWeather(response) {
   updateDayTwo.innerHTML = `${daysShort[now.getDay()]}`;
 
   let updateDayTwoLow = document.querySelector(".dayTwoLow");
-  let dayTwoLow = response.data.daily[1].temperature.minimum;
-  updateDayTwoLow.innerHTML = Math.round(dayTwoLow);
+  updateDayTwoLow.innerHTML = Math.round(
+    response.data.daily[1].temperature.minimum
+  );
 
   let updateDayTwoHigh = document.querySelector(".dayTwoHigh");
-  let dayTwoHigh = response.data.daily[1].temperature.maximum;
-  updateDayTwoHigh.innerHTML = Math.round(dayTwoHigh);
+  updateDayTwoHigh.innerHTML = Math.round(
+    response.data.daily[1].temperature.maximum
+  );
 
   let updateDayTwoWeatherIcon = document.querySelector(".dayTwoWeatherIcon");
-  let dayTwoWeatherIcon = response.data.daily[1].condition.icon;
-  updateDayTwoWeatherIcon.innerHTML = `${dayTwoWeatherIcon}`;
+  updateDayTwoWeatherIcon.innerHTML = `<img scr="${response.data.daily[1].condition.icon_url}">`;
 
   let updateDayThree = document.querySelector("#dayThree");
   updateDayThree.innerHTML = `${daysShort[now.getDay()]}`;
 
   let updateDayThreeLow = document.querySelector(".dayThreeLow");
-  let dayThreeLow = response.data.daily[2].temperature.minimum;
-  updateDayThreeLow.innerHTML = Math.round(dayThreeLow);
+  updateDayThreeLow.innerHTML = Math.round(
+    response.data.daily[2].temperature.minimum
+  );
 
   let updateDayThreeHigh = document.querySelector(".dayThreeHigh");
-  let dayThreeHigh = response.data.daily[2].temperature.maximum;
-  updateDayThreeHigh.innerHTML = Math.round(dayThreeHigh);
+  updateDayThreeHigh.innerHTML = Math.round(
+    response.data.daily[2].temperature.maximum
+  );
 
   let updateDayThreeWeatherIcon = document.querySelector(
     ".dayThreeWeatherIcon"
   );
-  let dayThreeWeatherIcon = response.data.daily[2].condition.icon;
-  updateDayThreeWeatherIcon.innerHTML = `${dayThreeWeatherIcon}`;
+  updateDayThreeWeatherIcon.innerHTML = `<img scr="${response.data.daily[2].condition.icon_url}">`;
 
   let updateDayFour = document.querySelector("#dayFour");
   updateDayFour.innerHTML = `${daysShort[now.getDay()]}`;
 
   let updateDayFourLow = document.querySelector(".dayFourLow");
-  let dayFourLow = response.data.daily[3].temperature.minimum;
-  updateDayFourLow.innerHTML = Math.round(dayFourLow);
+  updateDayFourLow.innerHTML = Math.round(
+    response.data.daily[3].temperature.minimum
+  );
 
   let updateDayFourHigh = document.querySelector(".dayFourHigh");
-  let dayFourHigh = response.data.daily[3].temperature.maximum;
-  updateDayFourHigh.innerHTML = Math.round(dayFourHigh);
+  updateDayFourHigh.innerHTML = Math.round(
+    response.data.daily[3].temperature.maximum
+  );
 
   let updateDayFourWeatherIcon = document.querySelector(".dayFourWeatherIcon");
-  let dayFourWeatherIcon = response.data.daily[3].condition.icon;
-  updateDayFourWeatherIcon.innerHTML = `${dayFourWeatherIcon}`;
+  updateDayFourWeatherIcon.innerHTML = `<img scr="${response.data.daily[3].condition.icon_url}">`;
 
   let updateDayFive = document.querySelector("#dayFive");
   updateDayFive.innerHTML = `${daysShort[now.getDay()]}`;
 
   let updateDayFiveLow = document.querySelector(".dayFiveLow");
-  let dayFiveLow = response.data.daily[4].temperature.minimum;
-  updateDayFiveLow.innerHTML = Math.round(dayFiveLow);
+  updateDayFiveLow.innerHTML = Math.round(
+    response.data.daily[4].temperature.minimum
+  );
 
   let updateDayFiveHigh = document.querySelector(".dayFiveHigh");
-  let dayFiveHigh = response.data.daily[4].temperature.maximum;
-  updateDayFiveHigh.innerHTML = Math.round(dayFiveHigh);
+  updateDayFiveHigh.innerHTML = Math.round(
+    response.data.daily[4].temperature.maximum
+  );
 
   let updateDayFiveWeatherIcon = document.querySelector(".dayFiveWeatherIcon");
-  let dayFiveWeatherIcon = response.data.daily[4].condition.icon;
-  updateDayFiveWeatherIcon.innerHTML = `img scr="${response.data.daily[4].condition.icon_url}`;
+  updateDayFiveWeatherIcon.innerHTML = `<img scr="${response.data.daily[4].condition.icon_url}">`;
 
   let updateDaySix = document.querySelector("#daySix");
   updateDaySix.innerHTML = `${daysShort[now.getDay(5)]}`;
 
   let updateDaySixLow = document.querySelector(".daySixLow");
-  let daySixLow = response.data.daily[5].temperature.minimum;
-  updateDaySixLow.innerHTML = Math.round(daySixLow);
+  updateDaySixLow.innerHTML = Math.round(
+    response.data.daily[5].temperature.minimum
+  );
 
   let updateDaySixHigh = document.querySelector(".daySixHigh");
-  let daySixHigh = response.data.daily[5].temperature.maximum;
-  updateDaySixHigh.innerHTML = Math.round(daySixHigh);
+  updateDaySixHigh.innerHTML = Math.round(
+    response.data.daily[5].temperature.maximum
+  );
 
   let updateDaySixWeatherIcon = document.querySelector(".daySixWeatherIcon");
-  let daySixWeatherIcon = response.data.daily[5].condition.icon;
-  updateDaySixWeatherIcon.innerHTML = `${daySixWeatherIcon}`;
+  updateDaySixWeatherIcon.innerHTML = `<img scr="${response.data.daily[5].condition.icon_url}">`;
 }
 
 function searchCity(city) {
