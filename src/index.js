@@ -31,8 +31,6 @@ function refreshWeather(response) {
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
 
-  let weatherIcon = `<img scr="${response.data.daily[currentDay].condition.icon_url}" class="weather-icon" >`;
-
   let temperature = response.data.daily[currentDay].temperature.day;
   let temperatureElement = document.querySelector(".current-temperature");
   temperatureElement.innerHTML = Math.round(temperature);
@@ -44,6 +42,9 @@ function refreshWeather(response) {
   let humidity = response.data.daily[currentDay].temperature.humidity;
   let updateHumidity = document.querySelector(".humidity");
   updateHumidity.innerHTML = `Humidity: ${humidity}%`;
+
+  let updateTodayWeatherIcon = document.querySelector("#todayWeatherIcon");
+  updateTodayWeatherIcon.innerHTML = `<img src="${response.data.daily[0].condition.icon}" class="weather-icon">`;
 
   let updateDayTwo = document.querySelector("#dayTwo");
   updateDayTwo.innerHTML = `${daysShort[now.getDay() + 1]}`;
@@ -59,7 +60,7 @@ function refreshWeather(response) {
   );
 
   let updateDayTwoWeatherIcon = document.querySelector("#dayTwoWeatherIcon");
-  updateDayTwoWeatherIcon.innerHTML = `<img scr="${response.data.daily[1].condition.icon}">`;
+  updateDayTwoWeatherIcon.innerHTML = `<img src="${response.data.daily[1].condition.icon}" class="weather-icon">`;
 
   let updateDayThree = document.querySelector("#dayThree");
   updateDayThree.innerHTML = `${daysShort[now.getDay() + 2]}`;
@@ -75,9 +76,9 @@ function refreshWeather(response) {
   );
 
   let updateDayThreeWeatherIcon = document.querySelector(
-    ".dayThreeWeatherIcon"
+    "#dayThreeWeatherIcon"
   );
-  updateDayThreeWeatherIcon.innerHTML = `<img scr="${response.data.daily[2].condition.icon_url}">`;
+  updateDayThreeWeatherIcon.innerHTML = `<img src="${response.data.daily[2].condition.icon_url}" class="weather-icon">`;
 
   let updateDayFour = document.querySelector("#dayFour");
   updateDayFour.innerHTML = `${daysShort[now.getDay() + 3]}`;
@@ -92,8 +93,8 @@ function refreshWeather(response) {
     response.data.daily[3].temperature.maximum
   );
 
-  let updateDayFourWeatherIcon = document.querySelector(".dayFourWeatherIcon");
-  updateDayFourWeatherIcon.innerHTML = `<img scr="${response.data.daily[3].condition.icon_url}">`;
+  let updateDayFourWeatherIcon = document.querySelector("#dayFourWeatherIcon");
+  updateDayFourWeatherIcon.innerHTML = `<img src="${response.data.daily[3].condition.icon_url}" class="weather-icon">`;
 
   let updateDayFive = document.querySelector("#dayFive");
   updateDayFive.innerHTML = `${daysShort[now.getDay() + 4]}`;
@@ -108,11 +109,11 @@ function refreshWeather(response) {
     response.data.daily[4].temperature.maximum
   );
 
-  let updateDayFiveWeatherIcon = document.querySelector(".dayFiveWeatherIcon");
-  updateDayFiveWeatherIcon.innerHTML = `<img scr="${response.data.daily[4].condition.icon_url}">`;
+  let updateDayFiveWeatherIcon = document.querySelector("#dayFiveWeatherIcon");
+  updateDayFiveWeatherIcon.innerHTML = `<img src="${response.data.daily[4].condition.icon_url}" class="weather-icon">`;
 
   let updateDaySix = document.querySelector("#daySix");
-  updateDaySix.innerHTML = `${daysShort[now.getDay(5) + 5]}`;
+  updateDaySix.innerHTML = `${daysShort[now.getDay() + 5]}`;
 
   let updateDaySixLow = document.querySelector(".daySixLow");
   updateDaySixLow.innerHTML = Math.round(
@@ -124,8 +125,8 @@ function refreshWeather(response) {
     response.data.daily[5].temperature.maximum
   );
 
-  let updateDaySixWeatherIcon = document.querySelector("#weatherIcon");
-  updateDaySixWeatherIcon.innerHTML = `<img scr="${response.data.daily[5].condition.icon_url}" class="weather-icon>`;
+  let updateDaySixWeatherIcon = document.querySelector("#daySixWeatherIcon");
+  updateDaySixWeatherIcon.innerHTML = `<img src="${response.data.daily[5].condition.icon_url}" class="weather-icon">`;
 }
 
 function searchCity(city) {
