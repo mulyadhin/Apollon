@@ -146,7 +146,7 @@ function searchRequest(event) {
   searchCity(searchInput.value);
 }
 
-searchCity("New York");
+searchCity("Heidelberg");
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchRequest);
