@@ -9,7 +9,22 @@ let days = [
   "Friday",
   "Saturday",
 ];
-let daysShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let daysShort = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+];
 let dayForecast = daysShort[now.getDay()];
 let day = days[now.getDay()];
 let hours = now.getHours();
@@ -44,7 +59,7 @@ function refreshWeather(response) {
   updateHumidity.innerHTML = `Humidity: ${humidity}%`;
 
   let updateTodayWeatherIcon = document.querySelector("#todayWeatherIcon");
-  updateTodayWeatherIcon.innerHTML = `<img src="${response.data.daily[0].condition.icon}" class="weather-icon">`;
+  updateTodayWeatherIcon.innerHTML = `<img src="${response.data.daily[0].condition.icon_url}" class="weather-icon">`;
 
   let updateDayTwo = document.querySelector("#dayTwo");
   updateDayTwo.innerHTML = `${daysShort[now.getDay() + 1]}`;
@@ -60,7 +75,7 @@ function refreshWeather(response) {
   );
 
   let updateDayTwoWeatherIcon = document.querySelector("#dayTwoWeatherIcon");
-  updateDayTwoWeatherIcon.innerHTML = `<img src="${response.data.daily[1].condition.icon}" class="weather-icon">`;
+  updateDayTwoWeatherIcon.innerHTML = `<img src="${response.data.daily[1].condition.icon_url}" class="weather-icon">`;
 
   let updateDayThree = document.querySelector("#dayThree");
   updateDayThree.innerHTML = `${daysShort[now.getDay() + 2]}`;
